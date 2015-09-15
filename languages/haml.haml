@@ -1,28 +1,20 @@
-!!! XML
-!!!
-%html(xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en")
+!!! 5
+%html
   %head
-    %title= article.title
+    %title= "Title"
+    %meta{ :charset => "utf-8" }
+    %link{ :rel => "stylesheet", :href => "css/main.css" }
   %body
-    - parameter = "value"
-    /[if IE]
-      %a{ :href => 'http://www.mozilla.com/en-US/firefox/' }
-        %h1 Get Firefox
-    -# Example comment
-    -#
-      This is a...
-      multi-line comment
+    %article
+      %h1= "Haml example"
+      %p
+        Haml (HTML abstraction markup language) is based on one primary principle: markup should be beautiful. It’s not just beauty for beauty’s sake either; Haml accelerates and simplifies template creation down to veritable haiku.
+    %script{ :src => "js/main.js" }
 
-    %section.container
-      - articles.each do |article|
-        %article
-          %h1= "Article: #{article.title}"
-          %a{ :href => article.url } More Info...
-          .content
-            = article.content
-      #copyright
-        %p#copyright_statement Copyright 2015
-:javascript
-  $(document).ready(function() {
-    alert("Hello!");
-  });
+
+-# 2. Tests ----------------------
+
+-# line comment
+-# multi-line
+  comment
+/ html comment
