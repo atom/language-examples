@@ -1,11 +1,18 @@
-<?xml version="1.0" encoding="UTF-8"?>
+
+<!-- 1. Example -->
+
+<?xml version="1.0"?>
+<?xml-stylesheet type="text/css" href="example.css"?>
+<article>
+  <title>My Article</title>
+  <authors>
+    <author>Mr. Foo</author>
+    <author>Mr. Bar</author>
+  </authors>
+  <body>This is my article text.</body>
+</article>
+
+
+<!-- 2. Tests -->
+
 <!-- This is a comment -->
-<e:employees xmlns:e="http://schemas.somewhere.com/employees">
-  <employee id="123">
-    <name><![CDATA[John Doe]]></name>
-    <title lang='en'>King</title>
-    <active/>
-    <salary>100000</salary>
-    <department key="R&amp;D">R&amp;D</department>
-  </employee>
-</e:employees>
