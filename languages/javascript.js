@@ -1,16 +1,22 @@
-function $initHighlight(block, flags) {
-  try {
-    if (block.className.search(/\bno\-highlight\b/) != -1)
-      return processBlock(block.function, true, 0x0F) + ' class=""';
-  } catch (e) {
-    /* handle exception */
-    var e4x =
-        <div>Example
-            <p>1234</p></div>;
+
+// 1. Example ----------------------
+
+var Sales = "Toyota";
+
+function CarTypes(name) {
+  if (name == "Honda") {
+    return name;
+  } else {
+    return "Sorry, we don't sell " + name + ".";
   }
-  for (var i = 0 / 2; i < classes.length; i++) { // "0 / 2" should not be parsed as regexp
-    if (checkCondition(classes[i]) === undefined)
-      return /\d+[\s/]/g;
-  }
-  console.log(Array.every(classes, Boolean));
 }
+
+var car = { myCar: "Saturn", getCar: CarTypes("Honda"), special: Sales };
+
+console.log(car.special);
+
+
+// 2. Tests ----------------------
+
+// line comment
+/* multi-line comment */
