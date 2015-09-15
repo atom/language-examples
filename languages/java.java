@@ -1,74 +1,41 @@
+
+// 1. Example ----------------------------
+
+/*
+  Reverse Number using Java
+  This Java Reverse Number Example shows how to reverse a given number.
+*/
+
+public class ReverseNumber {
+
+  public static void main(String[] args) {
+
+    //original number
+    int number = 1234;
+    int reversedNumber = 0;
+    int temp = 0;
+
+    while(number > 0){
+      //use modulus operator to strip off the last digit
+      temp = number%10;
+
+      //create the reversed number
+      reversedNumber = reversedNumber * 10 + temp;
+      number = number/10;
+    }
+
+    //output the reversed number
+    System.out.println("Reversed Number is: " + reversedNumber);
+  }
+}
+
+
+// 2. Tests ----------------------------
+
 package com.somedomain.here;
 
 import java.io.File;
-import java.util.List;
-
 import static java.io.File.*;
 
-/**
- * Class <b>JAVA</b> Doc
- *
- * @author Some Important Person
- */
-@Awesome("yeah baby!")
-public class Foo<T extends List> extends Bar<T> implements SomeInterface {
-
-  private static final int COUNT = 0x243;
-  private int myCount = 0;
-
-  @Cool(reason="because")
-  public static int staticMethod(String[] values, int n) {
-    try {
-      System.out.print("This is the value:\n" + values[0]);
-    } catch (Exception e) {
-      e.printStackTrace();
-    }
-
-    if (n > 0) {
-      return COUNT; // single line comment
-    } else {
-      return -COUNT;
-    }
-  }
-
-  public Foo(int count) {
-    myCount = count;
-  }
-
-  /* This is a multiple...
-      ...line comment. */
-
-  public int getMyCount() throws MyFavoriteException {
-    return myCount;
-  }
-
-  /**
-   * Increment the count
-   * @param by the amount to increment by
-   */
-  public void increment(int by) {
-    myCount += by;
-  }
-
-  public String describe() {
-    switch (myCount) {
-      case 0: return "0";
-      case 1: return "1";
-      default: return "other";
-    }
-  }
-
-  public MyFooInterface createFooBar() {
-    final String test = null;
-
-    return new MyFooInterface() {
-      public boolean isValid() {
-        return false;
-      }
-    };
-  }
-
-  public static interface MyFooInterface {
-    public boolean isValid();
-  }
-}
+// line comment
+/* multi-line comment */
