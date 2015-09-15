@@ -1,34 +1,91 @@
-@media screen and (-webkit-min-device-pixel-ratio: 0) {
-  body:first-of-type pre::after {
-    content: 'highlight: ' attr(class);
+
+/* 1. Example -------------------------------- */
+
+html {
+  font-family: 'Lucida Grande', Verdana, sans-serif;
+  font-size: 16px;
+  line-height: 1.5;
+  color: #333;
+  background-color: hsl(30,100%,96%);
+}
+
+@media (min-width: 1000px) {
+  html {
+    font-size: 20px;
   }
-  body {
-    background: linear-gradient(45deg, blue, red);
-  }
 }
 
-@import url('print.css');
-@page:right {
- margin: 1cm 2cm 1.3cm 4cm;
+body { margin: 0; }
+
+a {
+  color: cornflowerblue;
+  text-decoration: none;
 }
 
-@font-face {
-  font-family: Chunkfive; src: url('Chunkfive.otf');
+.avatar {
+  display: inline-block;
+  width: 48px;
+  height: 48px;
+  border-radius: 4px;
+  border: 2px solid white;
+  box-shadow: 1px 0 hsla(0,0%,0%,.2);
 }
 
-div.text,
-#content,
-li[lang=ru] {
-  font: Tahoma, Chunkfive, sans-serif;
-  background: url('hatch.png') /* wtf? */;
-  color: #F0F0F0 !important;
+.footer {
+  text-align: center;
+  font-size: .8em;
+  color: white;
+  background-color: hsl(30,20%,32%);
+}
+
+
+/* 2. Tests -------------------------------- */
+
+.values {
+  display: flex;
+  display: none !important;
+
+  content: "Hello";
+
+  width: auto;
+  width: 0;
+  width: 100px;
   width: 100%;
+  width: 1em;
+  width: 1vw;
+
+  color: black;
+  color: #000;
+  color: hsl(0,0%,0%);
+  color: transparent;
+
+  font-size: initial;
+  font-size: inherit;
+
+  font-family: 'Lucida Grande', Verdana, sans-serif;
+
+  background: url("atom.svg") no-repeat center;
+  background: linear-gradient(to left, transparent, black) no-repeat center;
 }
 
+.valid {
+  /* This is a comment */
+  // This is an invalid comment, but still used often
 
-/* Tests */
-
-.support-test {
-  background: blue; /* <- valid properties/values should be highlighted more */
-  invalid-property: invalid-color; /* <- invalid should be toned down */
+  background: blue; /* valid property + value */
+  invalid-property: invalid-color; /* invalid property + value */
 }
+
+h1,
+.class,
+#id,
+[attribute],
+
+.state:hover,
+.pseudo::before,
+
+.nth:first-child,
+.nth:nth-child(even) {}
+
+@media screen and (max-width: 1000px) and (min-width: 500px) {}
+@import url('print.css');
