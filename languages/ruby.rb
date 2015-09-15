@@ -1,5 +1,5 @@
-class A < B; def self.create(object = User) object end end
-class Zebra; def inspect; "X#{2 + self.object_id}" end end
+
+# 1. Example -----------------------------
 
 module ABC::DEF
   include Comparable
@@ -26,3 +26,9 @@ hash = {1 => 'one', 2 => 'two'}
 
 2.0.0p0 :001 > ['some']
  => ["some"]
+
+
+# 2. Tests -----------------------------
+
+class A < B; def self.create(object = User) object end end
+class Zebra; def inspect; "X#{2 + self.object_id}" end end
