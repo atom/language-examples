@@ -32,6 +32,7 @@ a {
 }
 
 .footer {
+  padding: calc(5% + 20px);
   text-align: center;
   font-size: .8em;
   color: white;
@@ -79,7 +80,7 @@ a {
 h1,
 .class,
 #id,
-[attribute],
+[attribute="true"],
 
 .state:hover,
 .pseudo::before,
