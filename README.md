@@ -6,7 +6,7 @@ Each language file should include the following sections:
 
 #### 1. Example
 
-An example of a language. Its purpose is to show a typical use case and get a quick overall impression.
+An example of a language. Its purpose is to show a typical use case and get a quick overall impression. Preferably, it should be a real word example, no foo/bar etc.
 
 
 #### 2. Tests
