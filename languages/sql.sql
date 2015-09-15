@@ -1,4 +1,6 @@
--- full line comment
+
+-- 1. Example
+
 SELECT
   d.name AS department, e.id, full_name, max(salary),
   CASE WHEN e.type = 'p'
@@ -12,4 +14,10 @@ INNER JOIN departments AS d ON e.department = d.id
 GROUP BY e.department
 WHERE salary > (SELECT avg(salary) FROM employees)
 AND e.department IS NOT NULL
+ORDER BY d.name
+
+
+-- 2. Tests
+
+-- full line comment
 ORDER BY d.name -- inline comment
