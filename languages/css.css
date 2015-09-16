@@ -9,34 +9,20 @@ html {
   background-color: hsl(30,100%,96%);
 }
 
-@media (min-width: 1000px) {
-  html {
-    font-size: 20px;
-  }
-}
-
-body { margin: 0; }
-
 a {
   color: cornflowerblue;
   text-decoration: none;
+}
+
+a:hover {
+  color: blue;
 }
 
 .avatar {
   display: inline-block;
   width: 48px;
   height: 48px;
-  border-radius: 4px;
-  border: 2px solid white;
-  box-shadow: 1px 0 hsla(0,0%,0%,.2);
-}
-
-.footer {
-  padding: calc(5% + 20px);
-  text-align: center;
-  font-size: .8em;
-  color: white;
-  background-color: hsl(30,20%,32%);
+  border-radius: 50%;
 }
 
 
@@ -70,9 +56,6 @@ a {
 }
 
 .valid {
-  /* This is a comment */
-  // This is an invalid comment, but still used often
-
   background: blue; /* valid property + value */
   invalid-property: invalid-color; /* invalid property + value */
 }

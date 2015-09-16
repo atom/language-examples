@@ -17,6 +17,3 @@ console.log(car.special);
 
 
 // 2. Tests ----------------------
-
-// line comment
-/* multi-line comment */

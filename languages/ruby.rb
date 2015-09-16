@@ -1,34 +1,26 @@
 
 # 1. Example -----------------------------
 
-module ABC::DEF
-  include Comparable
-
-  # @param test
-  # @return [String] nothing
-  def foo(test)
-    Thread.new do |blockvar|
-      ABC::DEF.reverse(:a_symbol, :'a symbol', :<=>, 'test' + ?\012)
-      answer = valid?4 && valid?CONST && ?A && ?A.ord
-    end.join
+class Person
+  attr_reader :name, :age
+  def initialize(name, age)
+    @name, @age = name, age
   end
-
-  def [](index) self[index] end
-  def ==(other) other == self end
+  def <=>(person) # the comparison operator for sorting
+    age <=> person.age
+  end
+  def to_s
+    "#{name} (#{age})"
+  end
 end
 
-class Car < ActiveRecord::Base
-  has_many :wheels, class_name: 'Wheel', foreign_key: 'car_id'
-  scope :available, -> { where(available: true) }
-end
+group = [
+  Person.new("Bob", 33),
+  Person.new("Chris", 16),
+  Person.new("Ash", 23)
+]
 
-hash = {1 => 'one', 2 => 'two'}
-
-2.0.0p0 :001 > ['some']
- => ["some"]
+puts group.sort.reverse
 
 
 # 2. Tests -----------------------------
-
-class A < B; def self.create(object = User) object end end
-class Zebra; def inspect; "X#{2 + self.object_id}" end end

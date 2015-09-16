@@ -27,7 +27,7 @@
           "onMouseUp": "sun1.opacity = (sun1.opacity / 100) * 90;"
       }
     }
-  }
+  },
 
 
   { "2.": "Tests" },

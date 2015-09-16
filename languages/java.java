@@ -1,11 +1,6 @@
 
 // 1. Example ----------------------------
 
-/*
-  Reverse Number using Java
-  This Java Reverse Number Example shows how to reverse a given number.
-*/
-
 public class ReverseNumber {
 
   public static void main(String[] args) {
@@ -31,11 +26,3 @@ public class ReverseNumber {
 
 
 // 2. Tests ----------------------------
-
-package com.somedomain.here;
-
-import java.io.File;
-import static java.io.File.*;
-
-// line comment
-/* multi-line comment */

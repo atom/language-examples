@@ -18,6 +18,3 @@ ORDER BY d.name
 
 
 -- 2. Tests
-
--- full line comment
-ORDER BY d.name -- inline comment

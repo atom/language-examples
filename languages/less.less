@@ -12,41 +12,21 @@ html {
   line-height: 1.5;
   color: @foreground-color;
   background-color: @background-color;
-
-  @media (min-width: @mq-desktop) {
-    font-size: 20px;
-  }
 }
 
 a {
   color: @link-color;
   text-decoration: none;
-}
-
-.framed(@radius: 5px) {
-  border-radius: @radius;
-  border: 2px solid white;
-  box-shadow: 1px 0 hsla(0,0%,0%,.2);
+  &:hover {
+    color: lighten(@link-color, 5%);
+  }
 }
 
 .avatar {
   display: inline-block;
   width: 48px;
   height: 48px;
-  .framed(4px);
-}
-
-.footer {
-  text-align: center;
-  font-size: .8em;
-  color: darken(@foreground-color, 20%);
-  background-color: darken(@background-color, 10%);
-
-  .avatar {
-    display: block;
-    margin-left: auto;
-    margin-right: auto;
-  }
+  border-radius: 50%;
 }
 
 
@@ -54,9 +34,6 @@ a {
 
 @import "variables";
 @import (reference) "variables";
-
-/* Block comment */
-// Line comment
 
 .variables {
   @variable: 10px;

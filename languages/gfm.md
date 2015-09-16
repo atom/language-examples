@@ -1,5 +1,5 @@
 
-<!-- 1. Example -->
+<!-- 1. Example ------------------------------- -->
 
 # I love cheese
 
@@ -12,7 +12,7 @@ Mozzarella cheese and wine cheddar. Cheesy grin st. agur blue cheese say cheese 
 > Source: [cheeseipsum.co.uk](http://www.cheeseipsum.co.uk)
 
 
-<!-- 2. Tests -->
+<!-- 2. Tests ------------------------------- -->
 
 # hello world
 ## hello world

@@ -1,42 +1,56 @@
-grade = (student, period=(if b? then 7 else 6), messages={"A": "Excellent"}) ->
-  if student.excellentWork
-    "A+"
-  else if student.okayStuff
-    if student.triedHard then "B" else "B-"
-  else
-    "C"
 
-square = (x) -> x * x
+# 1. Example ----------------------------------
 
-two = -> 2
-
-math =
-  root:   Math.sqrt
-  square: square
-  cube:   (x) -> x * square x
-
-race = (winner, runners...) ->
-  print winner, runners
-
-class Animal extends Being
+class Animal
   constructor: (@name) ->
 
   move: (meters) ->
     alert @name + " moved #{meters}m."
 
-hi = `function() {
-  return [document.title, "Hello JavaScript"].join(": ");
-}`
+class Snake extends Animal
+  move: ->
+    alert "Slithering..."
+    super 5
 
-heredoc = """
-CoffeeScript subst test #{ 0o010 + 0xf / 0b10 + "nested string #{ /\n/ }"}
-"""
+class Horse extends Animal
+  move: ->
+    alert "Galloping..."
+    super 45
 
-###
-CoffeeScript Compiler v1.2.0
-Released under the MIT License
-###
+sam = new Snake "Sammy the Python"
+tom = new Horse "Tommy the Palomino"
 
-OPERATOR = /// ^ (
-?: [-=]>             # function
-) ///
+sam.move()
+tom.move()
+
+
+# 2. Tests ----------------------------------
+
+# Assignment:
+number   = 42
+opposite = true
+
+# Conditions:
+number = -42 if opposite
+
+# Functions:
+square = (x) -> x * x
+
+# Arrays:
+list = [1, 2, 3, 4, 5]
+
+# Objects:
+math =
+  root:   Math.sqrt
+  square: square
+  cube:   (x) -> x * square x
+
+# Splats:
+race = (winner, runners...) ->
+  print winner, runners
+
+# Existence:
+alert "I knew it!" if elvis?
+
+# Array comprehensions:
+cubes = (math.cube num for num in list)

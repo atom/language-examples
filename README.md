@@ -1,19 +1,19 @@
-# Language Specs
+# Language Examples
 
-This is a collection of code examples. It's great for testing syntax highlighting when creating a theme.
+This is a collection of language examples. It's great for testing syntax highlighting when creating a theme.
 
-Each language file should include the following sections:
+Each language file comes with two sections:
 
-#### 1. Example
+#### 1. Simple example
 
-An example of a language. Its purpose is to show a typical use case and get a quick overall impression. Preferably, it should be a real word example, no foo/bar etc.
+A simple example of the language. Its purpose is to show a typical use case and get a quick overall impression.
 
 
-#### 2. Tests
+#### 2. More tests
 
-Various tests. It doesn't have to test every possibility, more like 1-2 of each "group". And maybe a few edge cases.
+If needed more examples or tests can be added. Or maybe show a few edge cases.
 
 
 ## Contributing
 
-If there is a language that isn't included or not complete, your contribution is highly appreciated. Thanks.
+Contributions are greatly appreciated. Please fork this repository and open a pull request to improve the examples.
