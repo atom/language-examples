@@ -8,6 +8,42 @@ These are examples of all languages that come bundled with Atom. Use them for te
 2. Open it in Atom.
 3. Click through all `languages` files to make sure all languages are supported.
 
+## Languages
+
+Here a list of all the Atom core languages:
+
+- `c`
+- `clojure`
+- `coffee-script`
+- `csharp`
+- `css`
+- `gfm`
+- `git`
+- `go`
+- `html`
+- `hyperlink`
+- `java`
+- `javascript`
+- `json`
+- `less`
+- `make`
+- `mustache`
+- `objective-c`
+- `perl`
+- `php`
+- `property-list`
+- `python`
+- `ruby`
+- `ruby-on-rails`
+- `sass`
+- `shellscript`
+- `sql`
+- `text`
+- `todo`
+- `toml`
+- `xml`
+- `yaml`
+
 ## Contributing
 
 Contributions are greatly appreciated. Please fork this repository and open a pull request to improve the examples.
