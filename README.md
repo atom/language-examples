@@ -1,12 +1,19 @@
 # Language Examples
 
-These are examples of all languages that come bundled with Atom. Use them for testing syntax highlighting when creating a theme.
+These are examples of all languages that come bundled with Atom. Use them to test syntax highlighting when creating a theme.
+
 
 ## How to use?
 
-1. Clone or download this repo.
-2. Open it in Atom.
-3. Click through all `languages` files to make sure all languages are supported.
+1. Open your theme in Atom.
+2. Clone or download this repo.
+3. Open that folder in "Dev Mode" (View > Developer > Open In Dev Mode...). You'll see a red icon bottom/right in the status bar. Opening in Dev Mode will automatically reload the styles when you save.
+4. Now, click through `languages` files to make sure all languages are supported.
+
+![screenshot](https://cloud.githubusercontent.com/assets/378023/9948136/582ba5fc-5ddb-11e5-90e0-637da60d779f.png)
+
+> Left: Make changes to your theme. Right: See the changes applied to all Atom core languages.
+
 
 ## Languages
 
@@ -43,6 +50,7 @@ Here a list of all the Atom core languages:
 - `toml`
 - `xml`
 - `yaml`
+
 
 ## Contributing
 
