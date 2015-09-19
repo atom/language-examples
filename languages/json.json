@@ -48,6 +48,7 @@
     }
   },
   {
-    //"comment": "test"
+    //"comment": "test",
+    "proper-comment": "JSON doesn't allow for comments, and the two slash characters on the line above should be rendered as invalid entities"
   }
 ]
