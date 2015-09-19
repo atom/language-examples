@@ -1,4 +1,9 @@
 
+/* 0. Todo -------------------------------- */
+/* 0.1. No closing semi-colon (actually causes a wrong scope) */
+/* 0.2. Minified example */
+/* 0.3. -vendor-prefix */
+
 /* 1. Example -------------------------------- */
 
 html {
@@ -73,3 +78,161 @@ h1,
 
 @media screen and (max-width: 1000px) and (min-width: 500px) {}
 @import url('print.css');
+
+
+/* 3. MDN reference -------------------------------- */
+
+/* 3.1. Selectors */
+
+/* 3.1.1. Basic selectors */
+
+span,
+[class~=classy],
+span.classy,
+span#identified,
+*[lang^=en],
+*.warning,
+*#maincontent,
+span[lang],
+span[lang="pt"],
+span[lang~="en-us"],
+span[lang|="zh"],
+a[href^="#"],
+a[href$=".cn"],
+a[href*="example"],
+input[type="email" i]
+{
+  color: red;
+}
+
+/* 3.1.2. Combinators */
+
+li:first-of-type + li,
+p ~ span,
+div > span,
+div span
+{
+  background-color: blue;
+}
+
+/* 3.1.3. Pseudo-classes */
+
+/* print styles */
+@page :first,
+@page :left,
+@page :right {
+  margin: 2in 3in;
+}
+
+a:link,
+a:visited,
+a:hover,
+a:active,
+input:checked,
+:checked,
+input[type="radio"]:checked,
+input[type="checkbox"]:checked,
+option:checked,
+input[type="text"]:disabled,
+.box:empty,
+input:enabled,
+input:disabled,
+span:first-child,
+div :first-of-type,
+.first-name:focus,
+.last-name:focus,
+:link:hover,
+.foo:hover,
+div.menu-bar li:hover > ul,
+:indeterminate,
+:indeterminate + span,
+:invalid,
+:-moz-submit-invalid,
+:-moz-ui-invalid,
+input:invalid,
+form:invalid,
+input:valid,
+form:valid,
+input:required,
+li:last-child,
+p em:last-of-type,
+a:link,
+.external:link,
+p:not(.classy),
+body :not(p),
+tr:nth-child(2n+1),
+tr:nth-child(odd),
+tr:nth-child(2n),
+tr:nth-child(even),
+span:nth-child(0n+1),
+span:nth-child(1),
+span:nth-child(-n+3),
+tr:nth-last-child(-n+3),
+span:nth-last-of-type(2),
+p:nth-of-type(2n+1),
+p:nth-of-type(2n),
+span:only-child,
+span:only-of-type
+input:in-range,
+input:out-of-range,
+input:in-range + label::after,
+input:out-of-range + label::after,
+input:-moz-read-write,
+input:read-write,
+:target,
+:target:before {
+  visibility: hidden;
+}
+
+:lang(en) > Q { quotes: '\201C' '\201D' '\2018' '\2019'; }
+:lang(fr) > Q { quotes: '« ' ' »'; }
+:lang(de) > Q { quotes: '»' '«' '\2039' '\203A'; }
+
+/* 3.1.4. Pseudo-elements */
+
+element:after {}
+element::after {}
+
+.ribbon::after,
+q::before,
+q::after,
+p::first-letter,
+p::first-line,
+::-moz-selection,
+::selection,
+p::-moz-selection,
+p::selection
+{
+  background: #000;
+  color: #fff;
+}
+
+/* 3.1.5. Experimental */
+
+:-moz-any(ol, ul, menu, dir) :-moz-any(ol, ul, menu, dir) ul,
+:-moz-any(ol, ul, menu, dir) :-moz-any(ol, ul, menu, dir) menu,
+:-moz-any(ol, ul, menu, dir) :-moz-any(ol, ul, menu, dir) dir {
+  list-style-type: square;
+}
+
+*:fullscreen {
+  position:fixed;
+  top:0;
+  right:0;
+  bottom:0;
+  left:0;
+  margin:0;
+  box-sizing:border-box;
+  width:100%;
+  height:100%;
+  object-fit:contain;
+}
+
+/* TODO 3.2. Properties */
+/* https://developer.mozilla.org/en-US/docs/Web/CSS/Reference */
+
+/* TODO 3.3. Values */
+/* https://developer.mozilla.org/en/docs/Web/CSS/length */
+
+/* TODO 3.4. @-rules */
+/* https://developer.mozilla.org/en-US/docs/Web/CSS/At-rule */
