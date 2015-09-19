@@ -37,6 +37,9 @@ two __things__ are **bold**
   - nested list
   - nested list
 
+- [ ] Something to be done
+- [x] Accomplished task
+
 1. one thing
 2. two thing
 
