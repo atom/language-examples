@@ -13,3 +13,11 @@
 ?>
 
 <!-- 2. Tests -->
+
+<?php
+  class getAdder {
+    return function($y) use ($x) {
+      return $x + $y;
+    };
+  }
+?>

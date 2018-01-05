@@ -68,3 +68,14 @@ a {
   @extend .class;
   background: blue;
 }
+
+
+
+.class {
+  &__nested {
+    background: blue;
+  }
+  &-nested {
+    background: blue;
+  }
+}

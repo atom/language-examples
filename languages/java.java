@@ -26,3 +26,12 @@ public class ReverseNumber {
 
 
 // 2. Tests ----------------------------
+
+public class Test {
+  public void test(Object a) {
+    System.out.println("hello");
+    if(a instanceof String) {
+      System.out.println("it's me");
+    }
+  }
+}

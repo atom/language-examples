@@ -13,7 +13,10 @@ for jpg; do
   fi
 done
 echo all conversions successful
-exit 0
 
 
 # 2. Tests -----------------------------
+
+for i in $(cat $gnu_cache_dir/list.lst); do #scan subdirectory listed in gnu_filelist
+
+for #comment in

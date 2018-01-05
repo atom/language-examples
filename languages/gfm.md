@@ -53,7 +53,16 @@ Inline `<code>`.
 ```html
 <!-- Fenced code -->
 <div class="main"></div>
+<!DOCTYPE html>
+<html class="no-js" lang="">
+  <head>
+    <title>Title</title>
 ```
+
+```text
+just some text
+```
+
 
 | This          | is a          | Table |
 | ------------- |:-------------:| -----:|

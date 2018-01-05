@@ -24,3 +24,11 @@ puts group.sort.reverse
 
 
 # 2. Tests -----------------------------
+
+def initialize(rbconfig)
+
+begin
+  File.foreeach(safefile()) do |line|
+  k, v = *line.split(/=/, 2)
+
+  

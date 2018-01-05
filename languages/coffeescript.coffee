@@ -26,6 +26,9 @@ tom.move()
 
 # 2. Tests ----------------------------------
 
+
+$controls = $("##{chartId}")
+
 # Assignment:
 number   = 42
 opposite = true
