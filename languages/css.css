@@ -1,4 +1,12 @@
 
+/* 0. Todo -------------------------------- */
+/* TODO {Grammar} Omitting the closing semi-colon causes wrong scopes */
+/* TODO Add example of minified/compact css */
+/* TODO {Grammar} Add styling to -vendor-prefixes */
+/* TODO {Grammar} Style unit in values as punctuation, as in sass/less */
+/* TODO Complete MDN reference, 3.2 and 3.4 */
+
+
 /* 1. Example -------------------------------- */
 
 html {
@@ -73,3 +81,639 @@ h1,
 
 @media screen and (max-width: 1000px) and (min-width: 500px) {}
 @import url('print.css');
+
+
+/* 3. MDN reference -------------------------------- */
+
+/* 3.1. Selectors */
+
+/* 3.1.1. Basic selectors */
+
+span,
+[class~=classy],
+span.classy,
+span#identified,
+*[lang^=en],
+*.warning,
+*#maincontent,
+span[lang],
+span[lang="pt"],
+span[lang~="en-us"],
+span[lang|="zh"],
+a[href^="#"],
+a[href$=".cn"],
+a[href*="example"],
+input[type="email" i]
+{
+  color: red;
+}
+
+/* 3.1.2. Combinators */
+
+li:first-of-type + li,
+p ~ span,
+div > span,
+div span
+{
+  background-color: blue;
+}
+
+/* 3.1.3. Pseudo-classes */
+
+/* print styles */
+@page :first,
+@page :left,
+@page :right {
+  margin: 2in 3in;
+}
+
+a:link,
+a:visited,
+a:hover,
+a:active,
+input:checked,
+:checked,
+input[type="radio"]:checked,
+input[type="checkbox"]:checked,
+option:checked,
+input[type="text"]:disabled,
+.box:empty,
+input:enabled,
+input:disabled,
+span:first-child,
+div :first-of-type,
+.first-name:focus,
+.last-name:focus,
+:link:hover,
+.foo:hover,
+div.menu-bar li:hover > ul,
+:indeterminate,
+:indeterminate + span,
+:invalid,
+:-moz-submit-invalid,
+:-moz-ui-invalid,
+input:invalid,
+form:invalid,
+input:valid,
+form:valid,
+input:required,
+li:last-child,
+p em:last-of-type,
+a:link,
+.external:link,
+p:not(.classy),
+body :not(p),
+tr:nth-child(2n+1),
+tr:nth-child(odd),
+tr:nth-child(2n),
+tr:nth-child(even),
+span:nth-child(0n+1),
+span:nth-child(1),
+span:nth-child(-n+3),
+tr:nth-last-child(-n+3),
+span:nth-last-of-type(2),
+p:nth-of-type(2n+1),
+p:nth-of-type(2n),
+span:only-child,
+span:only-of-type
+input:in-range,
+input:out-of-range,
+input:in-range + label::after,
+input:out-of-range + label::after,
+input:-moz-read-write,
+input:read-write,
+:target,
+:target:before {
+  visibility: hidden;
+}
+
+:lang(en) > Q { quotes: '\201C' '\201D' '\2018' '\2019'; }
+:lang(fr) > Q { quotes: '« ' ' »'; }
+:lang(de) > Q { quotes: '»' '«' '\2039' '\203A'; }
+
+/* 3.1.4. Pseudo-elements */
+
+div:after, div::after {}
+
+.ribbon::after,
+q::before,
+q::after,
+p::first-letter,
+p::first-line,
+::-moz-selection,
+::selection,
+p::-moz-selection,
+p::selection
+{
+  background: #000;
+  color: #fff;
+}
+
+/* 3.1.5. Experimental */
+
+:-moz-any(ol, ul, menu, dir) :-moz-any(ol, ul, menu, dir) ul,
+:-moz-any(ol, ul, menu, dir) :-moz-any(ol, ul, menu, dir) menu,
+:-moz-any(ol, ul, menu, dir) :-moz-any(ol, ul, menu, dir) dir {
+  list-style-type: square;
+}
+
+*:fullscreen {
+  position:fixed;
+  top:0;
+  right:0;
+  bottom:0;
+  left:0;
+  margin:0;
+  box-sizing:border-box;
+  width:100%;
+  height:100%;
+  object-fit:contain;
+}
+
+/* TODO 3.2. Properties */
+/* https://developer.mozilla.org/en-US/docs/Web/CSS/Reference */
+
+/* 3.3. Values */
+
+/* 3.3.1. <angle> */
+
+div {
+  transform: rotate(90deg);
+  transform: rotate(100grad);
+  transform: rotate(1rad);
+  transform: rotate(0.25turn);
+}
+
+/* 3.3.2. <basic-shape> */
+/* TODO https://developer.mozilla.org/en-US/docs/Web/CSS/basic-shape */
+
+/* 3.3.3. <blend-mode> */
+
+svg circle {
+  /* Keyword values */
+  mix-blend-mode: normal;
+  mix-blend-mode: multiply;
+  mix-blend-mode: screen;
+  mix-blend-mode: overlay;
+  mix-blend-mode: darken;
+  mix-blend-mode: lighten;
+  mix-blend-mode: color-dodge;
+  mix-blend-mode: color-burn;
+  mix-blend-mode: hard-light;
+  mix-blend-mode: soft-light;
+  mix-blend-mode: difference;
+  mix-blend-mode: exclusion;
+  mix-blend-mode: hue;
+  mix-blend-mode: saturation;
+  mix-blend-mode: color;
+  mix-blend-mode: luminosity;
+
+  /* Global values */
+  mix-blend-mode: initial;
+  mix-blend-mode: inherit;
+  mix-blend-mode: unset;
+}
+
+div {
+  background-blend-mode: normal;
+  background-blend-mode: darken, luminosity; /* when using multiple backgrounds */
+}
+
+/* 3.3.4. <color> */
+
+p {
+  color: #123;
+  color: #123abc;
+  color: #ABCdef;
+  color: rgb(51, 102, 153);
+  color: rgba(255, 153, 0, 0.5);
+  color: hsl(90, 50%, 50%);
+  color: hsla(180, 67%, 33%, 0.5);
+}
+
+span {
+  /* CSS level 1 */
+  color: black;
+  color: silver;
+  color: gray;
+  color: white;
+  color: maroon;
+  color: red;
+  color: purple;
+  color: fuchsia;
+  color: green;
+  color: lime;
+  color: olive;
+  color: yellow;
+  color: navy;
+  color: blue;
+  color: teal;
+  color: aqua;
+  /* CSS level 2 (rev 1) */
+  color: orange;
+  /* CSS color module level 3 */
+  color: aliceblue;
+  color: antiquewhite;
+  color: aquamarine;
+  color: azure;
+  color: beige;
+  color: bisque;
+  color: blanchedalmond;
+  color: blueviolet;
+  color: brown;
+  color: burlywood;
+  color: cadetblue;
+  color: chartreuse;
+  color: chocolate;
+  color: coral;
+  color: cornflowerblue;
+  color: cornsilk;
+  color: crimson;
+  color: darkblue;
+  color: darkcyan;
+  color: darkgoldenrod;
+  color: darkgray;
+  color: darkgreen;
+  color: darkgrey;
+  color: darkkhaki;
+  color: darkmagenta;
+  color: darkolivegreen;
+  color: darkorange;
+  color: darkorchid;
+  color: darkred;
+  color: darksalmon;
+  color: darkseagreen;
+  color: darkslateblue;
+  color: darkslategray;
+  color: darkslategrey;
+  color: darkturquoise;
+  color: darkviolet;
+  color: deeppink;
+  color: deepskyblue;
+  color: dimgray;
+  color: dimgrey;
+  color: dodgerblue;
+  color: firebrick;
+  color: floralwhite;
+  color: forestgreen;
+  color: gainsboro;
+  color: ghostwhite;
+  color: gold;
+  color: goldenrod;
+  color: greenyellow;
+  color: grey;
+  color: honeydew;
+  color: hotpink;
+  color: indianred;
+  color: indigo;
+  color: ivory;
+  color: khaki;
+  color: lavender;
+  color: lavenderblush;
+  color: lawngreen;
+  color: lemonchiffon;
+  color: lightblue;
+  color: lightcoral;
+  color: lightcyan;
+  color: lightgoldenrodyellow;
+  color: lightgray;
+  color: lightgreen;
+  color: lightgrey;
+  color: lightpink;
+  color: lightsalmon;
+  color: lightseagreen;
+  color: lightskyblue;
+  color: lightslategray;
+  color: lightslategrey;
+  color: lightsteelblue;
+  color: lightyellow;
+  color: limegreen;
+  color: linen;
+  color: mediumaquamarine;
+  color: mediumblue;
+  color: mediumorchid;
+  color: mediumpurple;
+  color: mediumseagreen;
+  color: mediumslateblue;
+  color: mediumspringgreen;
+  color: mediumturquoise;
+  color: mediumvioletred;
+  color: midnightblue;
+  color: mintcream;
+  color: mistyrose;
+  color: moccasin;
+  color: navajowhite;
+  color: oldlace;
+  color: olivedrab;
+  color: orangered;
+  color: orchid;
+  color: palegoldenrod;
+  color: palegreen;
+  color: paleturquoise;
+  color: palevioletred;
+  color: papayawhip;
+  color: peachpuff;
+  color: peru;
+  color: pink;
+  color: plum;
+  color: powderblue;
+  color: rosybrown;
+  color: royalblue;
+  color: saddlebrown;
+  color: salmon;
+  color: sandybrown;
+  color: seagreen;
+  color: seashell;
+  color: sienna;
+  color: skyblue;
+  color: slateblue;
+  color: slategray;
+  color: slategrey;
+  color: snow;
+  color: springgreen;
+  color: steelblue;
+  color: tan;
+  color: thistle;
+  color: tomato;
+  color: turquoise;
+  color: violet;
+  color: wheat;
+  color: whitesmoke;
+  color: yellowgreen;
+  /* CSS color module level 4 */
+  color: rebeccapurple;
+}
+
+div {
+  background: transparent;
+}
+
+p {
+  color: red;
+}
+
+p span {
+  background: currentcolor;
+  color: white;
+}
+
+p a {
+  color: #f03;
+  color: #F03;
+  color: #ff0033;
+  color: #FF0033;
+  color: rgb(255,0,51);
+  color: rgb(255, 0, 51);
+  color: rgb(255, 0, 51.2); /* ERROR! Don't use fractions, use integers */
+  color: rgb(100%,0%,20%);
+  color: rgb(100%, 0%, 20%);
+  color: rgb(100%, 0, 20%); /* ERROR! Don't mix up integer and percentage notation */
+}
+
+p a.special {
+  color: hsl(0,  100%,50%);
+  color: hsl(30, 100%,50%);
+  color: hsl(60, 100%,50%);
+  color: hsl(90, 100%,50%);
+  color: hsl(120,100%,50%);
+  color: hsl(150,100%,50%);
+  color: hsl(180,100%,50%);
+  color: hsl(210,100%,50%);
+  color: hsl(240,100%,50%);
+  color: hsl(270,100%,50%);
+  color: hsl(300,100%,50%);
+  color: hsl(330,100%,50%);
+  color: hsl(360,100%,50%);
+  color: hsl(120,100%,25%);
+  color: hsl(120,100%,50%);
+  color: hsl(120,100%,75%);
+  color: hsl(120,100%,50%);
+  color: hsl(120, 67%,50%);
+  color: hsl(120, 33%,50%);
+  color: hsl(120,  0%,50%);
+  color: hsl(120, 60%,70%);
+}
+
+li a {
+  color: rgba(255,0,0,0.1);
+  color: rgba(255,0,0,0.4);
+  color: rgba(255,0,0,0.7);
+  color: rgba(255,0,0,  1);
+}
+
+a {
+  color: hsla(240,100%,50%,0.05);
+  color: hsla(240,100%,50%, 0.4);
+  color: hsla(240,100%,50%, 0.7);
+  color: hsla(240,100%,50%,   1);
+}
+
+/* 3.3.5. <custom-ident> */
+
+/* 3.3.6. <gradient> */
+
+body {
+  background: -moz-linear-gradient(left,red,orange,yellow, green, blue,indigo,violet);
+  background: -webkit-linear-gradient(left,red,orange,yellow, green, blue,indigo,violet);
+  background: -ms-linear-gradient(left,red,orange,yellow, green, blue,indigo,violet);
+  background: -o-linear-gradient(left,red,orange,yellow, green, blue,indigo,violet);
+  background: linear-gradient(to right,red,orange,yellow, green, blue,indigo,violet);
+}
+
+body {
+  background: -moz-radial-gradient(red, yellow, rgb(30, 144, 255)) repeat scroll 0% 0% transparent;
+  background: radial-gradient(red, yellow, rgb(30, 144, 255));
+}
+
+body {
+  background: -moz-repeating-linear-gradient(top left -45deg, red, red 5px, white 5px, white 10px);
+  background: repeating-linear-gradient(to top left, red, red 5px, white 5px, white 10px);
+}
+
+/* 3.3.7. <image> */
+
+div {
+  background: url(test.jpg);
+  background: linear-gradient(to bottom, blue, red);
+  background: element(#colonne3);
+}
+
+/* 3.3.8. <integer> */
+
+div {
+  z-index: 12;
+  z-index: +123;
+  z-index: -456;
+  z-index: 0;
+  z-index: +0;
+  z-index: -0;
+}
+
+/* 3.3.9. <length> */
+
+p {
+  font-size: 1.5em;
+  font-size: 2ex;
+  font-size: 1.2ch;
+  font-size: 1.25rem;
+  font-size: 10vmin;
+  line-height: 10vmax;
+}
+
+div {
+  position: absolute;
+  top: 20vh; left: 25vw;
+  height: 60vh; width: 50vw;
+}
+
+div {
+  width: 100px;
+  width: 12.4mm;
+  height: 188cm; /* that's me, @burodepeper */
+  length: 8in; /* that's me too! :) */
+  font-size: 10pt;
+  line-height: 1pc;
+}
+
+/* 3.3.10. <mq-boolean> */
+
+/* 3.3.11. <number> */
+
+div {
+  valid-number: 12;
+  valid-number: 4.01;
+  valid-number: -456.8;
+  valid-number: 0.0;
+  valid-number: +0.0;
+  valid-number: -0.0;
+  valid-number: .60;
+  valid-number: 10e3;
+  valid-number: -3.4e-2;
+
+  invalid-number: 12.;
+  invalid-number: +-12.2;
+  invalid-number: 12.1.1;
+}
+
+/* 3.3.12. <percentage> */
+
+div {
+  font-size: 50%;
+  width: 200%;
+}
+
+/* 3.3.13. <position> */
+
+/*
+[
+
+  [ left | center | right | top | bottom | <percentage> | <length> ]
+
+  or
+
+  [ left | center | right | <percentage> | <length> ]
+  [ top | center | bottom | <percentage> | <length> ]
+
+  or
+
+  [ center | [ left | right ] [ <percentage> | <length> ]? ]
+  &&
+  [ center | [ top | bottom ] [ <percentage> | <length> ]? ]
+
+]
+*/
+
+/* 3.3.14. <ratio> */
+
+/* 3.3.15. <resolution> */
+
+/* 3.3.16. <shape> */
+
+img.clip04 {
+  clip: rect(10px, 20px, 20px, 10px);
+}
+
+/* 3.3.17. <string> */
+
+div::after {
+  /* Simple quote escaping */
+  content: "Awesome string with double quotes";
+  content: "Awesome string with \" escaped double quotes";
+  content: 'Awesome string with single quotes';
+  content: "Awesome string with \' escaped single quotes";
+
+  /* New line in a string */
+  content: "Awesome string with \Aline break";
+
+  /* String spanning over two lines (these two strings are exactly the same) */
+  content:"A really long \
+awesome string";
+  content: "A really long awesome string";
+}
+
+/* 3.3.18. <time> */
+
+div {
+  transition: all 12s;
+  transition: all -456ms;
+  transition: all 4.3ms;
+  transition: all 14mS;
+  transition: all +0s;
+  transition: all -0ms;
+}
+
+div.invalid {
+  transition: all 0;
+  transition: all 12.0;
+  transition: all 7 ms;
+}
+
+/* 3.3.19. <timing-function> */
+
+div {
+  transition-timing-function: ease;
+  transition-timing-function: ease-in;
+  transition-timing-function: ease-out;
+  transition-timing-function: ease-in-out;
+  transition-timing-function: linear;
+  transition-timing-function: step-start;
+  transition-timing-function: step-end;
+
+  transition-timing-function: steps(4, end);
+  transition-timing-function: steps(2, start);
+  transition-timing-function: steps(2);
+  transition-timing-function: cubic-bezier(0.1, 0.7, 1.0, 0.1);
+  transition-timing-function: cubic-bezier(0, 0, 1, 1);
+  transition-timing-function: cubic-bezier(0.1, -0.6, 0.2, 0);
+  transition-timing-function: cubic-bezier(0, 1.1, 0.8, 4);
+
+  transition-timing-function: ease, step-start, cubic-bezier(0.1, 0.7, 1.0, 0.1);
+
+  transition-timing-function: inherit;
+  transition-timing-function: initial;
+  transition-timing-function: unset;
+}
+
+div.invalid {
+  transition-timing-function: cubic-bezier(0.1, red, 1.0, green);
+  transition-timing-function: cubic-bezier(2.45, 0.6, 4, 0.1);
+  transition-timing-function: cubic-bezier(0.3, 2.1);
+  transition-timing-function: cubic-bezier(-1.9, 0.3, -0.2, 2.1);
+
+  transition-timing-function: steps(2.0, end);
+  transition-timing-function: steps(-3, start);
+  transition-timing-function: steps(0, end);
+}
+
+/* 3.3.20. <uri> */
+
+.topbanner {
+  background: url("topbanner.png") #00D no-repeat fixed;
+}
+
+ul {
+  list-style: square url(http://www.example.com/redball.png);
+}
+
+/* TODO 3.4. @-rules */
+/* https://developer.mozilla.org/en-US/docs/Web/CSS/At-rule */
